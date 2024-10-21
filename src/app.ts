@@ -12,10 +12,14 @@ export async function createApp(store: Store<RecipeType[]>, args: string[], ) {
     'list': list
   }
 
-  if(command in commands) {
-    const commandFunction = commands[command] 
-    await commandFunction(store, restArgs);
-  } else {
-    throw new AppError(`Unknown command: ${command}`);
+  try {
+    if (command in commands) {
+      const commandFunction = commands[command];
+      await commandFunction(store, restArgs);
+    } else {
+      throw new AppError(`Unknown command: ${command}`);
+    }
+  } catch (error: any) {
+    console.error(`Error: ${error.message}`);
   }
 }
