@@ -10,6 +10,7 @@ type RecipeStore = RecipeType[];
 const initialRecipes: RecipeType[] = [
   { id: 1, name: "Scrambled Egg", difficulty: "easy" },
   { id: 2, name: "Pancake", difficulty: "medium" },
+  { id: 3, name: "New englandi kagyloleves", difficulty: "hard"}
 ];
 
 const store = new FileStore<RecipeStore>(fileToStore, initialRecipes);
