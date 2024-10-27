@@ -30,12 +30,12 @@ Error: Unknown command: start-engine
 ### 2: List command should not have any arguments
 
 - Validate the `list` command's arguments.
-- If it has any show  meaningful error message to the user.
+- If it has any, show a meaningful error message to the user.
 
 Example:
 ```
 npm start -- list unnecessary
-Error: The list command should not have any argument.
+Error: The list command should not have any arguments.
 ```
 
 ### 3: Recipe details
